@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* - - - - - - General - - - - - - */ 
+body {
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #E6DBD5;
+  color: #5B3721;
+}
+
+a {
+  text-decoration: none;
+  color: #5B3721;
+}
+
+.router-link-active {
+  font-weight: 600;
+  background-color: #E6DBD5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  padding-bottom: 0.8em;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #CCC2C0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,20%), 0 6px 20px 0 rgba(0,0,0,20%);
+}
+
+ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 20px;
+}
+
+/* - - - - - - Home - - - - - - */ 
+
+.home {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4em;
+  padding-bottom: 0.8em;
+}
+
+.home h1 {
+  font-size: 4em;
+}
+
+.home a {
+  display: block;
+  width: 200px;
+
+  border-radius: 0.4em;
+  padding: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  background: #5B3721;
+  color: #E6DBD5 ;
+}
+
+.home {
+  height: calc(100vh - 120px);
+  background-image: url(/imgs/portada.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* - - - - - - Form - - - - - - */
+
+/* - - - - - - Resultados - - - */ 
+
+/* Animations */ 
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 0.7s ease;
+  }
+  .fade-leave-active {
+    transition: opacity 0.7s ease;
+    opacity: 0;
+  }
