@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADM - (Pacilio, Julián / Gattas, Silvina)</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM - (Pacilio, Julián / Gattas, Silvina)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/vue.js"></script>
 </head>
-  <body>
+
+    <body>
     
+        <div id="app">       
+            <nav>
+                <ul>
+                    <li><router-link to="/" exact>Home</router-link></li>
+                    <li><router-link to="/resultado" exact>Ver el resultado</router-link></li>
+                </ul>
+            </nav>    
 
+            
+            <transition name="fade" mode="out-in">
+                <router-view>
 
-
-
+                </router-view>
+            </transition>
+        </div>
 
     <script src="scripts/router/vue-router.js"></script>
-
+    <script src="componentes/form.js"></script>
+    <script src="componentes/resultado.js"></script>
     <script src="scripts/router/rutas.js"></script>
-    
-  </body>
-</html>
-</head>
 
+    </body>
+</html>
