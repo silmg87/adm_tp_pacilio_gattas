@@ -28,9 +28,39 @@
         </div>
 
     <script src="scripts/router/vue-router.js"></script>
+
     <script src="componentes/form.js"></script>
     <script src="componentes/resultado.js"></script>
+    <script src="componentes/cuestionario.js"></script>
+    
     <script src="scripts/router/rutas.js"></script>
 
     </body>
 </html>
+
+<!-- 
+<div class='form'>
+    <form v-on:submit.prevent novalidate>
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="form_data.nombre">
+        </div>
+
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" v-model="form_data.apellido">
+        </div>
+
+        <div>
+            <label for="Edad">Edad</label>
+            <input type="number" name="edad" id="edad" v-model.number="form_data.edad">
+        </div>
+
+        <div>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="masculino" v-bind:value="H" v-model="form_data.sexo">
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="femenino" v-bind:value="M" v-model="form_data.sexo">
+        </div>
+    </form>
+</div> -->

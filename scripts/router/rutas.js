@@ -1,5 +1,5 @@
 const home = { template: `
-            <div class='home'>
+                <div class='home'>
                 <h1>Namaste</h1>
                 <p>Conocé tu Yoga ideal</p>
                 <p>
@@ -23,7 +23,6 @@ const routes = [
     { path: '/form', component: form },
     { path: '/resultado', component: resultado },
     { path: '*', redirect: '/' }
-
 ];
 
 
@@ -35,5 +34,39 @@ const router = new VueRouter({
 // Instanciamos VUE
 const app = new Vue({
 	el:"#app",
-    router
+
+    router,
+
+    data: {
+        yogas: [
+            // Aca pasamos como objeto, los 3 o 4 tipos de yogas 
+            {   
+                id: 1, 
+                titulo: 'Titulo-Yoga 1',
+                texto:'Descripción Yoga',
+                img:'',
+                alt:'',
+                rtas: 2,
+            },
+            {   
+                id: 2, 
+                titulo: 'Titulo-Yoga 2',
+                texto:'Descripción Yoga 2',
+                img:'',
+                alt:''
+            },
+            {   
+                id: 3, 
+                titulo:'Titulo-Yoga 3',
+                texto:'Descripción Yoga 3',
+                img:'',
+                alt:''
+            },
+        ],
+        preguntas: [
+            {
+                //Preguntas para iterar con v-for
+            }
+        ]
+    }
 });
