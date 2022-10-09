@@ -94,6 +94,60 @@ nav ul li a {
 }
 
 /* - - - - - - Form - - - - - - */
+.boton {
+  padding: .8em;
+  border-radius: .5em;
+  background-color: #5B3721;
+  border: none;
+  color: #E6DBD5;
+  font-size: 1em;
+  margin: 1em 0;
+  width: 30%;
+}
+
+/* - - - - - - Preguntas - - - - - - */
+
+.preguntas {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  width: 1024px;
+  margin: 5em auto;
+  align-items: center;
+  height: 100vh;
+  background-color: #5b3721;
+  border-radius: .75em;
+
+}
+
+.preguntas div {
+  margin: 0 2em;
+}
+
+img {
+  width: 350px;
+}
+
+.preguntas h2,
+.preguntas p {
+  font-family: 'Quicksand', sans-serif;
+  color: #E6DBD5;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.preguntas button {
+  padding: .8em;
+  border-radius: .5em;
+  background-color: #e6dbd5;
+  border: none;
+  color: #5b3721;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+}
 
 /* - - - - - - Resultados - - - */ 
 

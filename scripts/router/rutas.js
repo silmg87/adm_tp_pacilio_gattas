@@ -42,31 +42,37 @@ const app = new Vue({
             // Aca pasamos como objeto, los 3 o 4 tipos de yogas 
             {   
                 id: 1, 
-                titulo: 'Titulo-Yoga 1',
-                texto:'Descripción Yoga',
-                img:'',
-                alt:'',
-                rtas: 2,
+                titulo: 'Hatha Yoga',
+                descripcion:'Descripción Yoga',
+                caracteristicas: 'El Hatha yoga es una tipología indicada para todo el mundo, más aún si practicas yoga para principiantes, ya que no requiere muchos conocimientos o experiencia previa. No quiere decir necesariamente que sea el tipo de yoga más fácil, pero el hecho de ser más pausado lo hace más accesible. Las clases de Hatha yoga se centran en un buen alineamiento del cuerpo. Y el profesor te puede explicar cada postura con detalle, guiándote a lo largo de la clase. Si eres principiante, recuerda que siempre puedes adaptar la práctica a tu nivel de yoga. Lo importante es que has dado el paso de estar ahí, no debes centrarte en alcanzar la postura perfecta. Se trata, sobre todo, de hacerlo lo mejor que puedas escuchando cómo responde tu cuerpo. No dudes en tomarte un descanso cuando lo necesites y simplemente respirar o quedarte en la posición del niño hasta que estés listo para continuar',
+                beneficios: '',
+                img:'../../imgs/hatha-1.jpg',
+                alt:'Mujer practicando la postura',
+                video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/AGjOuaFCQrg" title="YouTube video player" allowfullscreen></iframe>',
+                rtas: ''
             },
             {   
                 id: 2, 
-                titulo: 'Titulo-Yoga 2',
-                texto:'Descripción Yoga 2',
-                img:'',
-                alt:''
+                titulo: 'Vinyasa Yoga',
+                descripcion:'Descripción Yoga 2',
+                caracteristicas: '',
+                beneficios: '',
+                img:'../../imgs/hatha-2.jpg',
+                alt:'Mujer practicando la postura',
+                video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ORZqGpZguD0" title="YouTube video player" allowfullscreen></iframe>',
+                rtas: ''
             },
             {   
                 id: 3, 
-                titulo:'Titulo-Yoga 3',
-                texto:'Descripción Yoga 3',
-                img:'',
-                alt:''
+                titulo:'Yin Yoga',
+                descripcion:'Descripción Yoga 3',
+                caracteristicas: '',
+                beneficios: '',
+                img:'../../imgs/hatha-3.jpg',
+                alt:'Mujer practicando la postura',
+                video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/yMCOQdpoVE8" title="YouTube video player" allowfullscreen></iframe>',
+                rtas: ''
             },
         ],
-        preguntas: [
-            {
-                //Preguntas para iterar con v-for
-            }
-        ]
     }
 });
