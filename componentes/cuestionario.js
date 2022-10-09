@@ -19,8 +19,8 @@ Vue.component('cuestionario', {
 
     template: `
             <div>
-
-            <div>
+                
+            <div>hola </div>
                 
             </div>
 
