@@ -23,7 +23,7 @@ Vue.component('form-personal', {
             //Preguntas
             preguntas:[
                 {
-                    id:'Pregunta 1',
+                    id: 1,
                     pregunta: '¿Con qué frecuencia realizas actividad física?',
                     opciones: [
                         'No realizo ninguna actividad',
@@ -32,10 +32,10 @@ Vue.component('form-personal', {
                     ],
                     imagen:'../imgs/yoga1.jpg',
                     alt: 'Mujer practicando yoga',
-                    puntos: 0
+                    punto: 0
                 },
                 {
-                    id:'Pregunta 2',
+                    id: 2,
                     pregunta: '¿Has practicado yoga alguna vez?',
                     opciones: [
                         'No, nunca practique',
@@ -44,10 +44,10 @@ Vue.component('form-personal', {
                     ],
                     imagen:'../imgs/yoga2.jpg',
                     alt: 'Mujer practicando yoga',
-                    puntos: 0
+                    punto: 0
                 },
                 {
-                    id:'Pregunta 3',
+                    id: 3,
                     pregunta: '¿Te consideras una persona activa?',
                     opciones: [
                         'Me adapto a las situaciones',
@@ -56,10 +56,10 @@ Vue.component('form-personal', {
                     ],
                     imagen:'../imgs/yoga3.jpg',
                     alt: 'Mujer practicando yoga',
-                    puntos: 0
+                    punto: 0
                 },
                 {
-                    id:'Pregunta 4',
+                    id: 4,
                     pregunta: '¿Sos de realizar meditaciones?',
                     opciones: [
                         'No, nunca realice',
@@ -68,10 +68,10 @@ Vue.component('form-personal', {
                     ],
                     imagen:'../imgs/yoga4.jpg',
                     alt: 'Mujer practicando yoga',
-                    puntos: 0
+                    punto: 0
                 },
                 {
-                    id:'Pregunta 5',
+                    id: 5,
                     pregunta: '¿Qué resultados deseas obtener a través del yoga?',
                     opciones: [
                         'Respiración y una correcta postura',
@@ -80,7 +80,7 @@ Vue.component('form-personal', {
                     ],
                     imagen:'../imgs/yoga1.jpg',
                     alt: 'Mujer practicando yoga',
-                    puntos: 0
+                    punto: 0
                 }
             ],
         }
@@ -132,8 +132,8 @@ Vue.component('form-personal', {
                     :opciones="item.opciones"
                     :imagen="item.imagen"
                     :alt="item.alt"
-                    :puntos="item.puntos"
-                    @puntitos="recibePuntaje">
+                    :punto="item.punto"
+                    @puntoPregunta="recibirPunto">
     </cuestionario>
 
     <div class="text-center" v-if="mostrar_preguntas">
@@ -157,38 +157,6 @@ Vue.component('form-personal', {
         },
 
         iniciar:function(){
-
-            this.enviado = true
-            this.errores = []
-            
-            this.mostrar_preguntas = true
-            this.form_data.ver = false
-        },
-
-        recibePuntaje:function(punto){
-            this.puntos = punto
-        }
-    },
-
-    destroyed: function(){
-        console.log("Instancia de component form, destruida")
-    }   
-});
-
-/* 
-
-    <resultado-yoga
-                        v-for="item in this.storage"
-                        :key="0"
-                        :nombre="item.nombre"
-                        :apellido="item.apellido"
-                        :localidad="item.localidad"
-                        :sexo="item.sexo">
-    </resultado-yoga>
-
-
-    iniciar:function(){
-
             this.enviado = true
             this.errores = []
 
@@ -215,7 +183,23 @@ Vue.component('form-personal', {
                 this.mostrar_preguntas = true
                 this.form_data.ver = false
             }
+        },
+
+
+        recibirPunto:function(data){
+            let preguntaPunto = this.preguntas.find(pregunta => pregunta.id == data.id)
+            preguntaPunto.punto = data.punto
         }
+    },
+
+    destroyed: function(){
+        console.log("Instancia de component form, destruida")
+    }   
+});
+
+/* 
+
+    
 
 
 */

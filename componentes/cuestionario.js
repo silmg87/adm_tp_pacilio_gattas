@@ -7,7 +7,7 @@ Vue.component('cuestionario', {
     },
 
     //Se le pasa por props todo lo del array de preguntas del padre
-    props:["id", "pregunta", "opciones", "imagen", "alt", "puntos"],
+    props:["id", "pregunta", "opciones", "imagen", "alt", "punto"],
 
     template: `
             <div>
@@ -17,9 +17,9 @@ Vue.component('cuestionario', {
 
                         <form @submit.prevent novalidate>
                     
-                        <button type="button" value="1" @click="sumar">{{opciones[0]}}</button>
-                        <button type="button" value="2" @click="sumar">{{opciones[1]}}</button>
-                        <button type="button" value="3" @click="sumar">{{opciones[2]}}</button>
+                        <button type="button" value="1" @click="sumarValue">{{opciones[0]}}</button>
+                        <button type="button" value="2" @click="sumarValue">{{opciones[1]}}</button>
+                        <button type="button" value="3" @click="sumarValue">{{opciones[2]}}</button>
                         
                         </form>
 
@@ -31,19 +31,19 @@ Vue.component('cuestionario', {
             </div>`,
 
     methods: {
-        sumar:function(e){
-
+        sumarValue:function(e){
             this.activo = false;
-
             this.value = e.target.value;
             this.puntaje = parseInt(this.value); 
 
+            //this.punto = this.puntaje
+            let data = {
+                id: this.id,
+                punto: this.puntaje
+            }
+            this.$emit('puntoPregunta', data)
             console.log(this.puntaje);
         },
-
-        pasarPuntaje:function() {
-            this.$emit('puntitos', this.puntaje)
-        }
     },
 
     destroyed: function(){
